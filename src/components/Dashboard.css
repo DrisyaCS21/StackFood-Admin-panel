@@ -1,0 +1,140 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  min-height: calc(100vh - 110px);
+  background-color: #2c3e50 !important;
+}
+
+.sidebar-heading {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #a0aec0;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-section {
+  margin-bottom: 10px;
+}
+
+.sidebar-section .nav-link {
+  padding: 8px 15px;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 14px;
+}
+
+.sidebar-section .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-link {
+  padding: 8px 15px;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 14px;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.main-content {
+  flex: 1;
+  background-color: #f8f9fa;
+}
+
+.avatar-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+
+.stat-icon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-light-green {
+  background-color: rgba(40, 167, 69, 0.1);
+}
+
+.bg-light-danger {
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+.bg-light-warning {
+  background-color: rgba(255, 193, 7, 0.1);
+}
+
+.bg-success-light {
+  background-color: rgba(40, 167, 69, 0.2);
+}
+
+.bg-danger-light {
+  background-color: rgba(220, 53, 69, 0.2);
+}
+
+.bg-warning-light {
+  background-color: rgba(255, 193, 7, 0.2);
+}
+
+.text-purple {
+  color: #6f42c1;
+}
+
+.demo-banner {
+  background-color: #343a40;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* Prevent content from being hidden under fixed elements */
+body {
+  overflow-x: hidden;
+}
+
+/* Smooth transitions */
+.sidebar,
+.main-content {
+  transition: all 0.3s ease;
+}
+
+/* Mobile sidebar toggle button */
+.sidebar-toggle-btn {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Scrollbar styling for sidebar */
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+

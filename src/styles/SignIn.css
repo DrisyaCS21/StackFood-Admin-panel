@@ -1,0 +1,32 @@
+/* SignIn.css */
+.signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height */
+    position: relative;
+  }
+  
+  .auth-content {
+    background: rgba(255, 165, 0, 0.8); /* Orange transparent overlay */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  .content {
+    color: white;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
