@@ -36,3 +36,118 @@
     transform: rotate(360deg);
   }
 }
+
+/* Global styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Common utility classes */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Custom colors */
+.bg-orange {
+  background-color: #ff6767 !important;
+}
+
+.text-orange {
+  color: #ff6767 !important;
+}
+
+.btn-orange {
+  background-color: #ff6767 !important;
+  border-color: #ff6767 !important;
+  color: white !important;
+}
+
+.btn-orange:hover {
+  background-color: #ff5252 !important;
+  border-color: #ff5252 !important;
+}
+
+/* Page container */
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Content area */
+.content-area {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Card styles */
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styles */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(255, 103, 103, 0.05);
+}
+
+/* Form styles */
+.form-control:focus {
+  border-color: #ff6767;
+  box-shadow: 0 0 0 0.2rem rgba(255, 103, 103, 0.25);
+}
+
+/* Status badges */
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-active {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+}
+
+.status-pending {
+  background-color: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+}
+
+.status-inactive {
+  background-color: rgba(108, 117, 125, 0.1);
+  color: #6c757d;
+}
+
+.status-rejected {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+}
