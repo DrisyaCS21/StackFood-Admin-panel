@@ -27,7 +27,7 @@ import { Container } from "react-bootstrap";
 
 const Dashboard = () => {
   return (
-    <Container className="vh-100 d-flex flex-column align-items-center justify-content-center">
+    <Container className=" d-flex flex-column align-items-center justify-content-center">
       <h1>Welcome to StackFood Dashboard</h1>
       <p>Manage your food orders and settings here.</p>
     </Container>

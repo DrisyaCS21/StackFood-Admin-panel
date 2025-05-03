@@ -149,21 +149,84 @@ const Sidebar = ({
                   to="/orders"
                   className={`text-white py-1 ${isActive("/orders") && !isActive("/orders/pending") && !isActive("/orders/completed") ? "active" : ""}`}
                 >
-                  All Orders
+                  All 
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
                   to="/orders/pending"
                   className={`text-white py-1 ${isActive("/orders/pending") ? "active" : ""}`}
                 >
-                  Pending Orders
+                  Scheduled
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
                   to="/orders/completed"
                   className={`text-white py-1 ${isActive("/orders/completed") ? "active" : ""}`}
                 >
-                  Completed Orders
+                  Pending
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/orders/completed"
+                  className={`text-white py-1 ${isActive("/orders/completed") ? "active" : ""}`}
+                >
+                  Accepted
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/orders/completed"
+                  className={`text-white py-1 ${isActive("/orders/completed") ? "active" : ""}`}
+                >
+                  Processing
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/orders/completed"
+                  className={`text-white py-1 ${isActive("/orders/completed") ? "active" : ""}`}
+                >
+                  Food On The Way
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/orders/completed"
+                  className={`text-white py-1 ${isActive("/orders/completed") ? "active" : ""}`}
+                >
+                  Delivered
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/orders/completed"
+                  className={`text-white py-1 ${isActive("/orders/completed") ? "active" : ""}`}
+                >
+                  Canceled
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/orders/completed"
+                  className={`text-white py-1 ${isActive("/orders/completed") ? "active" : ""}`}
+                >
+                  Payment Failed
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/orders/completed"
+                  className={`text-white py-1 ${isActive("/orders/completed") ? "active" : ""}`}
+                >
+                  Refunded
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/orders/completed"
+                  className={`text-white py-1 ${isActive("/orders/completed") ? "active" : ""}`}
+                >
+                  Dine In
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/orders/completed"
+                  className={`text-white py-1 ${isActive("/orders/completed") ? "active" : ""}`}
+                >
+                  Offline Payments
                 </Nav.Link>
               </div>
             )}
@@ -188,10 +251,10 @@ const Sidebar = ({
             {expandedSections["dispatch"] && (
               <div className="ms-4">
                 <Nav.Link as={Link} to="/dispatch/list" className="text-white py-1">
-                  Dispatch List
+                  Searching DeliveryMan
                 </Nav.Link>
                 <Nav.Link as={Link} to="/dispatch/assign" className="text-white py-1">
-                  Assign Delivery
+                  Ongoing Orders
                 </Nav.Link>
               </div>
             )}
@@ -208,10 +271,7 @@ const Sidebar = ({
             {expandedSections["refunds"] && (
               <div className="ms-4">
                 <Nav.Link as={Link} to="/refunds/list" className="text-white py-1">
-                  Refund Requests
-                </Nav.Link>
-                <Nav.Link as={Link} to="/refunds/settings" className="text-white py-1">
-                  Refund Settings
+                  New Refund Requests
                 </Nav.Link>
               </div>
             )}
@@ -250,14 +310,35 @@ const Sidebar = ({
                   to="/restaurants"
                   className={`text-white py-1 ${isActive("/restaurants") && !isActive("/restaurants/add") ? "active" : ""}`}
                 >
-                  Restaurant List
+                  Add Restaurant
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
                   to="/restaurants/add"
                   className={`text-white py-1 ${isActive("/restaurants/add") ? "active" : ""}`}
                 >
-                  Add New
+                 Restaurant List
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/restaurants/add"
+                  className={`text-white py-1 ${isActive("/restaurants/add") ? "active" : ""}`}
+                >
+                 New Joining Request
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/restaurants/add"
+                  className={`text-white py-1 ${isActive("/restaurants/add") ? "active" : ""}`}
+                >
+                 Bulk Import
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/restaurants/add"
+                  className={`text-white py-1 ${isActive("/restaurants/add") ? "active" : ""}`}
+                >
+                 Bulk Export
                 </Nav.Link>
               </div>
             )}
@@ -282,14 +363,28 @@ const Sidebar = ({
                   to="/Categories"
                   className={`text-white py-1 ${isActive("/categories") && !isActive("/categories/add") ? "active" : ""}`}
                 >
-                  Category List
+                  Category
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
                   to="/categories/add"
                   className={`text-white py-1 ${isActive("/categories/add") ? "active" : ""}`}
                 >
-                  Add New
+                  Sub Category
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/categories/add"
+                  className={`text-white py-1 ${isActive("/categories/add") ? "active" : ""}`}
+                >
+                  Bulk Import
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/categories/add"
+                  className={`text-white py-1 ${isActive("/categories/add") ? "active" : ""}`}
+                >
+                  Bulk Export
                 </Nav.Link>
               </div>
             )}
@@ -310,14 +405,21 @@ const Sidebar = ({
                   to="/addons"
                   className={`text-white py-1 ${isActive("/addons") && !isActive("/addons/add") ? "active" : ""}`}
                 >
-                  Addon List
+                  List
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
                   to="/addons/add"
                   className={`text-white py-1 ${isActive("/addons/add") ? "active" : ""}`}
                 >
-                  Add New
+                  Bulk Import
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/addons/add"
+                  className={`text-white py-1 ${isActive("/addons/add") ? "active" : ""}`}
+                >
+                  Bulk Export
                 </Nav.Link>
               </div>
             )}
@@ -338,14 +440,35 @@ const Sidebar = ({
                   to="/foods"
                   className={`text-white py-1 ${isActive("/foods") && !isActive("/foods/add") ? "active" : ""}`}
                 >
-                  Food List
+                  Add New
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
                   to="/foods/add"
                   className={`text-white py-1 ${isActive("/foods/add") ? "active" : ""}`}
                 >
-                  Add New
+                  List
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/foods/add"
+                  className={`text-white py-1 ${isActive("/foods/add") ? "active" : ""}`}
+                >
+                  Review
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/foods/add"
+                  className={`text-white py-1 ${isActive("/foods/add") ? "active" : ""}`}
+                >
+                  Bulk Import
+                </Nav.Link>
+                <Nav.Link
+                  as={Link}
+                  to="/foods/add"
+                  className={`text-white py-1 ${isActive("/foods/add") ? "active" : ""}`}
+                >
+                  Bulk Export
                 </Nav.Link>
               </div>
             )}
@@ -426,10 +549,13 @@ const Sidebar = ({
             {expandedSections["advertisement"] && (
               <div className="ms-4">
                 <Nav.Link as={Link} to="/advertisement/list" className="text-white py-1">
-                  Ad List
+                  New Advertisement
                 </Nav.Link>
                 <Nav.Link as={Link} to="/advertisement/create" className="text-white py-1">
-                  Create Ad
+                  Ad Requests
+                </Nav.Link>
+                <Nav.Link as={Link} to="/advertisement/create" className="text-white py-1">
+                  Ads List
                 </Nav.Link>
               </div>
             )}
@@ -472,13 +598,25 @@ const Sidebar = ({
             >
               <Users size={18} className="me-2" /> Customers
             </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to="/wallet"
-              className={`text-white d-flex align-items-center ${isActive("/wallet") ? "active bg-primary" : ""}`}
-            >
-              <DollarSign size={18} className="me-2" /> Wallet
-            </Nav.Link>
+            
+           <Nav.Link
+            onClick={() => toggleSection("wallet")}
+            className="text-white d-flex alighn-items-center justify-content-between" >
+              <div>
+                <Image size={18} className="me-2" /> Wallet
+              </div>
+              {expandedSections["wallet"]? <ChevronDown size={16} /> : <ChevronRight size={16} />}
+           </Nav.Link>
+            {expandedSections["wallet"] && (
+              <div className="ms-4">
+                <Nav.Link as={Link} to="/wallet/list" className="text-white py-1">
+                 Add Fund
+                </Nav.Link>
+                <Nav.Link as={Link} to="/wallet/list" className="text-white py-1">
+                 Bonus
+                </Nav.Link>
+              </div>
+            )}
             <Nav.Link
               as={Link}
               to="/loyalty-point"
@@ -779,4 +917,4 @@ const Sidebar = ({
   )
 }
 
-export default Sidebar
+export default Sidebar;

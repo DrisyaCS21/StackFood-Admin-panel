@@ -22,7 +22,7 @@ const Dashboard = ({ children }) => {
   const [user, setUser] = useState(null)
 
   // Constants for layout calculations
-  const NAVBAR_HEIGHT = 60 // Approximate height of navbar
+  const NAVBAR_HEIGHT = 80 // Approximate height of navbar
   const BANNER_HEIGHT = 40 // Approximate height of the demo banner
   const TOTAL_TOP_HEIGHT = NAVBAR_HEIGHT + BANNER_HEIGHT
 
@@ -436,4 +436,4 @@ const Dashboard = ({ children }) => {
   )
 }
 
-export default Dashboard
+export default Dashboard;
