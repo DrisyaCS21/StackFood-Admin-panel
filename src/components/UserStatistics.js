@@ -45,7 +45,7 @@ const UserStatistics = () => {
           <span className="badge bg-light text-primary">Zone : All</span>
         </div>
 
-        <div className="position-relative" style={{ height: "240px" }}>
+        <div className="position-relative" style={{ height: "353px" }}>
           <Doughnut data={data} options={options} />
           <div className="position-absolute top-50 start-50 translate-middle text-center" style={{ width: "100px" }}>
             <div className="fw-bold">Total</div>

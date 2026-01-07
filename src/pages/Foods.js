@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { Card, Table, Form, Button, Badge, Pagination } from "react-bootstrap"
 import { Search, Filter, Download, Eye, Edit, Trash2, Plus } from "react-feather"
 import { Link } from "react-router-dom"
-import Dashboard from "../components/Dashboard"
+// import Dashboard from "../components/Dashboard"
 
 // Mock data for foods
 const mockFoods = [
@@ -154,8 +154,8 @@ const Foods = () => {
 
   return (
     <>
-      <Dashboard />
-      <div className="main-content p-4 bg-light">
+      {/* <Dashboard /> */}
+      <div className="main-content p-4 bg-light" style={{marginLeft: '100px'}}>
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h2>Foods</h2>
           <div>

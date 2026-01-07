@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Row, Col, Card, Form, Button, Nav, Tab } from "react-bootstrap"
 import { Save, Globe, Mail, Bell, CreditCard, Shield, Users } from "react-feather"
-import Dashboard from "../components/Dashboard"
+// import Dashboard from "../components/Dashboard"
 
 const Settings = () => {
   const [activeTab, setActiveTab] = useState("general")
@@ -77,15 +77,16 @@ const Settings = () => {
 
   return (
     <>
-      <Dashboard />
-      <div className="main-content p-4 bg-light">
+      {/* <Dashboard /> */}
+      <div className="main-content p-4 bg-light"
+       style={{marginLeft: '130px'}}>
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h2>Settings</h2>
         </div>
 
         <Tab.Container id="settings-tabs" activeKey={activeTab} onSelect={(k) => setActiveTab(k)}>
           <Row>
-            <Col md={3} lg={2}>
+            {/* <Col md={3} lg={2}>
               <Card className="border-0 shadow-sm mb-4">
                 <Card.Body className="p-0">
                   <Nav variant="pills" className="flex-column">
@@ -122,7 +123,7 @@ const Settings = () => {
                   </Nav>
                 </Card.Body>
               </Card>
-            </Col>
+            </Col> */}
             <Col md={9} lg={10}>
               <Card className="border-0 shadow-sm">
                 <Card.Body>

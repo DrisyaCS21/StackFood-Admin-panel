@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 import { Container, Row, Col, Card, Navbar, Form, Button, Dropdown } from "react-bootstrap"
 import { Settings, Bell, User, ShoppingBag } from "react-feather"
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -22,9 +22,9 @@ const Dashboard = ({ children }) => {
   const [user, setUser] = useState(null)
 
   // Constants for layout calculations
-  const NAVBAR_HEIGHT = 80 // Approximate height of navbar
+  const NAVBAR_HEIGHT = 70 // Approximate height of navbar
   const BANNER_HEIGHT = 40 // Approximate height of the demo banner
-  const TOTAL_TOP_HEIGHT = NAVBAR_HEIGHT + BANNER_HEIGHT
+  const TOTAL_TOP_HEIGHT = 110
 
   useEffect(() => {
     // Get user from localStorage
@@ -100,9 +100,9 @@ const Dashboard = ({ children }) => {
             <img
               src="https://stackfood-admin.6amtech.com/storage/app/public/business/2022-04-17-625c012c3c07d.png"
               alt="StackFood"
-              height="40"
+              height="25"
             />
-            <span className="ms-2 fw-bold text-secondary">STACK FOOD</span>
+            <span className="ms-2 fw-bold text-secondary"></span>
           </Navbar.Brand>
 
           <div className="d-flex align-items-center ms-auto">
@@ -138,8 +138,8 @@ const Dashboard = ({ children }) => {
                 </div>
               </Dropdown.Toggle>
               <Dropdown.Menu align="end">
-                <Dropdown.Item href="#/profile">Profile</Dropdown.Item>
-                <Dropdown.Item href="#/settings">Settings</Dropdown.Item>
+                <Dropdown.Item as={Link} to="/profile" >Profile</Dropdown.Item>
+                <Dropdown.Item href="/settings">Settings</Dropdown.Item>
                 <Dropdown.Divider />
                 <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
               </Dropdown.Menu>
@@ -169,9 +169,9 @@ const Dashboard = ({ children }) => {
 
         {/* Main Content */}
         <div
-          className="main-content py-4 bg-light flex-grow-1"
+          className="main-content bg-light flex-grow-1"
           style={{
-            marginLeft: sidebarCollapsed ? "0" : windowWidth >= 768 ? "260px" : "0",
+            marginLeft: sidebarCollapsed ? "0" : windowWidth >= 768 ? "135px" : "0",
             transition: "margin-left 0.3s ease-in-out",
             minHeight: `calc(100vh - ${TOTAL_TOP_HEIGHT}px)`,
             paddingLeft: "0",
@@ -211,11 +211,12 @@ const Dashboard = ({ children }) => {
               {/* Order Statistics Cards */}
               <Row className="mb-4">
                 <Col md={3}>
+                <Link to="/deliveredorders">
                   <Card className="h-100 border-0 shadow-sm bg-light-green">
                     <Card.Body className="d-flex justify-content-between align-items-center">
                       <div>
-                        <h2 className="text-success mb-0">47</h2>
-                        <p className="mb-0">Delivered orders</p>
+                        <h2 className="text-success mb-0">12</h2>
+                        <p className="mb-0 btn ">Delivered orders</p>
                       </div>
                       <div className="stat-icon bg-success-light text-success rounded-circle p-3">
                         <img
@@ -225,14 +226,16 @@ const Dashboard = ({ children }) => {
                       </div>
                     </Card.Body>
                   </Card>
+                  </Link>
                 </Col>
 
                 <Col md={3}>
+                <Link to="/canceledorders">
                   <Card className="h-100 border-0 shadow-sm bg-light-danger">
                     <Card.Body className="d-flex justify-content-between align-items-center">
                       <div>
                         <h2 className="text-danger mb-0">11</h2>
-                        <p className="mb-0">Canceled orders</p>
+                        <p className="mb-0 btn">Canceled orders</p>
                       </div>
                       <div className="stat-icon bg-danger-light text-danger rounded-circle p-3">
                         <img
@@ -242,14 +245,16 @@ const Dashboard = ({ children }) => {
                       </div>
                     </Card.Body>
                   </Card>
+                  </Link>
                 </Col>
 
                 <Col md={3}>
+                <Link to="/refundedorders" >
                   <Card className="h-100 border-0 shadow-sm bg-light-warning">
                     <Card.Body className="d-flex justify-content-between align-items-center">
                       <div>
                         <h2 className="text-warning mb-0">0</h2>
-                        <p className="mb-0">Refunded orders</p>
+                        <p className="mb-0 btn">Refunded orders</p>
                       </div>
                       <div className="stat-icon bg-warning-light text-warning rounded-circle p-3">
                         <img
@@ -259,14 +264,16 @@ const Dashboard = ({ children }) => {
                       </div>
                     </Card.Body>
                   </Card>
+                  </Link>
                 </Col>
 
                 <Col md={3}>
+                <Link to="/failedorders" className="text-decoration-none">
                   <Card className="h-100 border-0 shadow-sm bg-light-danger">
                     <Card.Body className="d-flex justify-content-between align-items-center">
                       <div>
                         <h2 className="text-danger mb-0">1</h2>
-                        <p className="mb-0">Payment failed orders</p>
+                        <p className="mb-0 btn">Payment failed orders</p>
                       </div>
                       <div className="stat-icon bg-danger-light text-danger rounded-circle p-3">
                         <img
@@ -276,12 +283,14 @@ const Dashboard = ({ children }) => {
                       </div>
                     </Card.Body>
                   </Card>
+                  </Link>
                 </Col>
               </Row>
 
               {/* Order Status Cards */}
               <Row className="mb-4">
                 <Col md={3}>
+                <Link to="/unassignedorders" >
                   <Card className="h-100 border-0 shadow-sm">
                     <Card.Body className="d-flex justify-content-between align-items-center">
                       <div className="d-flex align-items-center">
@@ -292,15 +301,17 @@ const Dashboard = ({ children }) => {
                           />
                         </div>
                         <div>
-                          <p className="mb-0">Unassigned Orders</p>
+                          <p className="mb-0 btn">Unassigned Orders</p>
                         </div>
                       </div>
-                      <h3 className="text-primary mb-0">78</h3>
+                      <h3 className="text-primary mb-0">11</h3>
                     </Card.Body>
                   </Card>
+                  </Link>
                 </Col>
 
                 <Col md={3}>
+                <Link to="/acceptedorders">
                   <Card className="h-100 border-0 shadow-sm">
                     <Card.Body className="d-flex justify-content-between align-items-center">
                       <div className="d-flex align-items-center">
@@ -311,15 +322,17 @@ const Dashboard = ({ children }) => {
                           />
                         </div>
                         <div>
-                          <p className="mb-0">Accepted By Delivery Man</p>
+                          <p className="mb-0 btn">Accepted By Delivery Man</p>
                         </div>
                       </div>
                       <h3 className="text-purple mb-0">3</h3>
                     </Card.Body>
                   </Card>
+                  </Link>
                 </Col>
 
                 <Col md={3}>
+                <Link to="/cooking">
                   <Card className="h-100 border-0 shadow-sm">
                     <Card.Body className="d-flex justify-content-between align-items-center">
                       <div className="d-flex align-items-center">
@@ -330,15 +343,17 @@ const Dashboard = ({ children }) => {
                           />
                         </div>
                         <div>
-                          <p className="mb-0">Cooking In Restaurant</p>
+                          <p className="mb-0 btn">Cooking In Restaurant</p>
                         </div>
                       </div>
                       <h3 className="text-success mb-0">5</h3>
                     </Card.Body>
                   </Card>
+                  </Link>
                 </Col>
 
                 <Col md={3}>
+                <Link to="/picked">
                   <Card className="h-100 border-0 shadow-sm">
                     <Card.Body className="d-flex justify-content-between align-items-center">
                       <div className="d-flex align-items-center">
@@ -355,6 +370,7 @@ const Dashboard = ({ children }) => {
                       <h3 className="text-warning mb-0">1</h3>
                     </Card.Body>
                   </Card>
+                  </Link>
                 </Col>
               </Row>
 
@@ -415,9 +431,11 @@ const Dashboard = ({ children }) => {
                     Business setup
                   </Button>
                   <span className="mx-2">•</span>
+                  <Link to="/profile">
                   <Button variant="link" className="text-decoration-none">
                     Profile
                   </Button>
+                  </Link>
                   <span className="mx-2">•</span>
                   <Button variant="link" className="text-decoration-none">
                     Dashboard

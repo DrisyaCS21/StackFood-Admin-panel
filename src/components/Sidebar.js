@@ -74,7 +74,7 @@ const Sidebar = ({
           className="position-fixed d-md-none"
           style={{
             zIndex: 1040,
-            top: `${TOTAL_TOP_HEIGHT + 10}px`,
+            top: 0,
             left: "10px",
           }}
           onClick={toggleSidebar}
@@ -110,7 +110,7 @@ const Sidebar = ({
             <InputGroup.Text className="bg-transparent border-secondary text-white">
               <Search size={16} />
             </InputGroup.Text>
-            <Form.Control placeholder="Search Menu..." className="bg-transparent border-secondary text-white" />
+            <Form.Control placeholder="Search Menu..." className="border-secondary text-white" />
           </InputGroup>
         </div>
 
@@ -125,7 +125,7 @@ const Sidebar = ({
           <Nav.Link
             as={Link}
             to="/pointofsale"
-            className={`text-white d-flex align-items-center`}
+            className={`text-white d-flex align-items-center ${isActive("/pointofsale") ? "active bg-primary" : "" }`}
           >
             <FileText size={18} className="me-2" /> Point of sale
           </Nav.Link>
@@ -153,63 +153,63 @@ const Sidebar = ({
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
-                  to="/orders/pending"
+                  to="/scheduled"
                   className={`text-white py-1 ${isActive("/orders/pending") ? "active" : ""}`}
                 >
                   Scheduled
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
-                  to="/orders/completed"
+                  to="/orders"
                   className={`text-white py-1 ${isActive("/orders/completed") ? "active" : ""}`}
                 >
                   Pending
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
-                  to="/orders/completed"
+                  to="/acceptedorders"
                   className={`text-white py-1 ${isActive("/orders/completed") ? "active" : ""}`}
                 >
                   Accepted
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
-                  to="/orders/completed"
+                  to="/cooking"
                   className={`text-white py-1 ${isActive("/orders/completed") ? "active" : ""}`}
                 >
                   Processing
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
-                  to="/orders/completed"
+                  to="/picked"
                   className={`text-white py-1 ${isActive("/orders/completed") ? "active" : ""}`}
                 >
                   Food On The Way
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
-                  to="/orders/completed"
+                  to="/deliveredorders"
                   className={`text-white py-1 ${isActive("/orders/completed") ? "active" : ""}`}
                 >
                   Delivered
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
-                  to="/orders/completed"
+                  to="/canceledorders"
                   className={`text-white py-1 ${isActive("/orders/completed") ? "active" : ""}`}
                 >
                   Canceled
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
-                  to="/orders/completed"
+                  to="/failedorders"
                   className={`text-white py-1 ${isActive("/orders/completed") ? "active" : ""}`}
                 >
                   Payment Failed
                 </Nav.Link>
                 <Nav.Link
                   as={Link}
-                  to="/orders/completed"
+                  to="refundedorders"
                   className={`text-white py-1 ${isActive("/orders/completed") ? "active" : ""}`}
                 >
                   Refunded
@@ -250,7 +250,7 @@ const Sidebar = ({
             </Nav.Link>
             {expandedSections["dispatch"] && (
               <div className="ms-4">
-                <Nav.Link as={Link} to="/dispatch/list" className="text-white py-1">
+                <Nav.Link as={Link} to="/unassignedorders" className="text-white py-1">
                   Searching DeliveryMan
                 </Nav.Link>
                 <Nav.Link as={Link} to="/dispatch/assign" className="text-white py-1">
@@ -282,7 +282,7 @@ const Sidebar = ({
             <div className="sidebar-heading">RESTAURANT MANAGEMENT</div>
             <Nav.Link
               as={Link}
-              to="/zone-setup"
+              to="/zonesetup"
               className={`text-white d-flex align-items-center ${isActive("/zone-setup") ? "active bg-primary" : ""}`}
             >
               <MapPin size={18} className="me-2" /> Zone Setup
@@ -574,7 +574,7 @@ const Sidebar = ({
             <div className="sidebar-heading">HELP & SUPPORT</div>
             <Nav.Link
               as={Link}
-              to="/chattings"
+              to="/chatting"
               className={`text-white d-flex align-items-center ${isActive("/chattings") ? "active bg-primary" : ""}`}
             >
               <MessageSquare size={18} className="me-2" /> Chattings
@@ -789,7 +789,7 @@ const Sidebar = ({
             <div className="sidebar-heading">BUSINESS SETTINGS</div>
             <Nav.Link
               as={Link}
-              to="/business-setup"
+              to="/settings"
               className={`text-white d-flex align-items-center ${isActive("/business-setup") ? "active bg-primary" : ""}`}
             >
               <Settings size={18} className="me-2" /> Business Setup

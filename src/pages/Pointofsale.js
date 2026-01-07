@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import FoodSection from "../components/FoodSection";
-import BillingSection from "./BillingSection.jsx";
-import "./.css"
+import BillingSection from "../components/BillingSection";
+import "./Pointofsale.css"
 
 
 
@@ -58,6 +58,7 @@ const Pointofsale = () => {
           updateQuantity={updateQuantity}
         />
       </div>
+      
       
     </div>
   );
